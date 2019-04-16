@@ -44,8 +44,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Signed in!", Toast.LENGTH_LONG).show();
                     if(((email.equals(ManagerData.getManagerEmail()))) && (password.equals(ManagerData.getManagerPassword()))) {
                         ManagerData.setManager(true);
+                        startActivity(new Intent(MainActivity.this, GarageActivity.class));
+                    } else {
+                        ManagerData.setManager(false);
+                        startActivity(new Intent(MainActivity.this, AttendantActivity.class));
                     }
-                    startActivity(new Intent(MainActivity.this, GarageActivity.class));
+
                 }
             }
         });
