@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Floor3"></activity>
-        <activity android:name=".Floor2" />
         <activity android:name=".Floor1" />
         <activity android:name=".AttendantActivity" />
         <activity android:name=".GarageActivity" />
