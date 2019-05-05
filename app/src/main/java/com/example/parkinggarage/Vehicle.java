@@ -1,9 +1,28 @@
 package com.example.parkinggarage;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Vehicle implements Serializable {
     String type;
+    String licenseplate;
+    Date date;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getLicenseplate() {
+        return licenseplate;
+    }
+
+    public void setLicenseplate(String licenseplate) {
+        this.licenseplate = licenseplate;
+    }
 
     Vehicle() {
         type = "Car";

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, GarageActivity.class));
                     } else {
                         ManagerData.setManager(false);
-                        startActivity(new Intent(MainActivity.this, AttendantActivity.class));
+                        startActivity(new Intent(MainActivity.this, Floor1.class));
                     }
 
                 }
