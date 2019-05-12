@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick1(View view) {
-        //Intent intent = new Intent(this, RegisterActivity.class);
+        //Intent intent = new Intent(this, RetrieveActivity.class);
         //startActivity(intent);
         final String email = emailText.getText().toString();
         final String password = passwordText.getText().toString();

@@ -7,6 +7,15 @@ public class Vehicle implements Serializable {
     String type;
     String licenseplate;
     Date date;
+    String attendant;
+
+    public String getAttendant() {
+        return attendant;
+    }
+
+    public void setAttendant(String attendant) {
+        this.attendant = attendant;
+    }
 
     public Date getDate() {
         return date;

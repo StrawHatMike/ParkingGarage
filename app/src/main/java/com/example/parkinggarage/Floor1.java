@@ -41,8 +41,11 @@ public class Floor1 extends AppCompatActivity {
 
 
     public void storeGarage(View view) {
-        setContentView(R.layout.activity_attendant);
         startActivity(new Intent(Floor1.this, AttendantActivity.class));
+    }
+
+    public void retrieveVehicle(View view) {
+        startActivity(new Intent(Floor1.this, RetrieveActivity.class));
     }
 
     public void generateGarage() {

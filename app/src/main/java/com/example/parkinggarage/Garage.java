@@ -52,19 +52,20 @@ public class Garage implements Serializable {
         }
     }
 
-    public void insertCar(Vehicle v) {
+    public boolean insertCar(Vehicle v) {
         for (int i = 0; i < nSize; i++) {
             if (arr.get(i) != null) {
                 if (!arr.get(i).isFilled()) {
                     if (arr.get(i).fill(v)) {
 
                         cur++;
-                        return;
+                        return true;
                     } else {
                     }
                 }
             }
         }
         System.err.println("Warning: Could not find an open spot!");
+        return false;
     }
 }

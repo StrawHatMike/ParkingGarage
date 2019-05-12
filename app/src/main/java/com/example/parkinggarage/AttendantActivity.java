@@ -17,7 +17,7 @@ import static com.example.parkinggarage.Floor1.garage;
 public class AttendantActivity extends AppCompatActivity {
 
     RadioButton radioButton, radioButton2, radioButton3;
-    EditText editText;
+    EditText editText, editText3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +26,7 @@ public class AttendantActivity extends AppCompatActivity {
         radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
         radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
         editText = (EditText) findViewById(R.id.editText);
+        editText3 = (EditText) findViewById(R.id.editText3);
     }
 
     public void addVehicle(View view) {
@@ -42,11 +43,15 @@ public class AttendantActivity extends AppCompatActivity {
         }
         v.setLicenseplate(lp);
         v.setDate(new Date());
-        garage.insertCar(v);
-        garage.display();
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference("database");
-        DatabaseReference child = ref.child("data");
-        child.setValue(garage);
+        v.setAttendant(editText3.getText().toString());
+        if(garage.insertCar(v)) {
+            garage.display();
+            final FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference ref = database.getReference("database");
+            DatabaseReference child = ref.child("data");
+            child.setValue(garage);
+            TicketActivity.v= v;
+            startActivity(new Intent(AttendantActivity.this, TicketActivity.class));
+        }
     }
 }
