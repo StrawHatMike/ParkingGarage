@@ -1,5 +1,6 @@
 package com.example.parkinggarage;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,5 +44,6 @@ public class RetrieveActivity extends AppCompatActivity {
                 System.out.println("Error!");
             }
         });
+        startActivity(new Intent(RetrieveActivity.this, Floor1.class));
     }
 }
