@@ -12,6 +12,8 @@
         android:layout_height="727dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="6dp"
         app:srcCompat="@drawable/floor"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -20,9 +22,9 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="62dp"
+        android:layout_alignStart="@+id/button4"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="215dp"
+        android:layout_marginTop="205dp"
         android:onClick="storeGarage"
         android:text="Store"
         tools:layout_editor_absoluteX="161dp"
@@ -30,15 +32,527 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="76dp"
-        android:layout_height="61dp"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="167dp"
-        android:layout_marginLeft="167dp"
-        android:layout_marginBottom="321dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginBottom="294dp"
         android:onClick="retrieveVehicle"
         android:text="Retrieve" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="39dp"
+        android:layout_height="31dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="66dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="47dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="105dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="39dp"
+        android:layout_height="23dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="154dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="35dp"
+        android:layout_height="23dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="185dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="46dp"
+        android:layout_height="41dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="215dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="44dp"
+        android:layout_height="26dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="255dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="48dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="294dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="48dp"
+        android:layout_height="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="297dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="44dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="49dp"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="222dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="58dp"
+        android:layout_height="52dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="52dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="52dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="51dp"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="50dp"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginRight="130dp"
+        android:rotation="270"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="52dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
+        android:rotation="270"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:rotation="270"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="50dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="167dp"
+        android:layout_marginLeft="167dp"
+        android:layout_marginTop="42dp"
+        android:rotation="270"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="58dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="44dp"
+        android:rotation="270"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="51dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="79dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="42dp"
+        android:rotation="270"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="49dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="37dp"
+        android:rotation="270"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="91dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="55dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="124dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="176dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="197dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="53dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="283dp"
+        android:longClickable="true"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="51dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="375dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="302dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="51dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="270dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="49dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="223dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="197dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="48dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="170dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="47dp"
+        android:layout_height="23dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="139dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginBottom="96dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/car"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="52dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginBottom="42dp"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/truck"
+        tools:visibility="invisible" />
 
 </RelativeLayout>

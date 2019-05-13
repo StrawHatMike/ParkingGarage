@@ -34,12 +34,12 @@
 
     <TextView
         android:id="@+id/texttype"
-        android:layout_width="wrap_content"
+        android:layout_width="168dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textdate"
+        android:layout_alignStart="@+id/button6"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginStart="-78dp"
+        android:layout_marginTop="326dp"
         android:text="Vehicle Type: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,11 +47,11 @@
 
     <TextView
         android:id="@+id/textname"
-        android:layout_width="115dp"
-        android:layout_height="21dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="394dp"
         android:text="Attendant Name: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,11 +59,12 @@
 
     <TextView
         android:id="@+id/textdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="236dp"
+        android:layout_height="34dp"
         android:layout_alignStart="@+id/textlicense"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="314dp"
+        android:layout_marginStart="-68dp"
+        android:layout_marginBottom="463dp"
         android:text="Parking Date: "
         tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="389dp" />

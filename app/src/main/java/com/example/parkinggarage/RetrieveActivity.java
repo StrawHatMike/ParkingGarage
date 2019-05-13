@@ -14,6 +14,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Date;
+
 public class RetrieveActivity extends AppCompatActivity {
 
     EditText editText2;
@@ -34,16 +36,22 @@ public class RetrieveActivity extends AppCompatActivity {
                     System.out.println("Found!'");
                     VehicleSpace newSpace = new VehicleSpace(searchSnapshot.child("type").getValue().toString());
                     newSpace.setDistance(Integer.valueOf(searchSnapshot.child("distance").getValue().toString()));
+                    ReceiptActivity.v = new Vehicle();
+                    ReceiptActivity.v.setLicenseplate(searchSnapshot.child("licensecopy").getValue().toString());
+                    ReceiptActivity.v.setType(searchSnapshot.child("typecopy").getValue().toString());
+                    ReceiptActivity.v.setAttendant(searchSnapshot.child("namecopy").getValue().toString());
+                    ReceiptActivity.v.setDate(searchSnapshot.child("datecopy").getValue(Date.class));
                     searchSnapshot.getRef().setValue(newSpace);
                     return;
                 }
                 System.out.println("Not Found");
+                startActivity(new Intent(RetrieveActivity.this, Floor1.class));
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 System.out.println("Error!");
             }
         });
-        startActivity(new Intent(RetrieveActivity.this, Floor1.class));
+        startActivity(new Intent(RetrieveActivity.this, ReceiptActivity.class));
     }
 }

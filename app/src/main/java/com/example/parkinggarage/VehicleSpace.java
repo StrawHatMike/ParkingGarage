@@ -53,6 +53,15 @@ public class VehicleSpace implements Serializable {
     public boolean isFilled() {
         return vehicle != null;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public boolean fill(Vehicle vehicle) {
         if (type.equals("Car") || type.equals("Motorcycle")) {
             if (vehicle.getType().equals("Truck")) {

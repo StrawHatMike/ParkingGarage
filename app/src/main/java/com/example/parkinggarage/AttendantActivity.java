@@ -50,7 +50,7 @@ public class AttendantActivity extends AppCompatActivity {
             DatabaseReference ref = database.getReference("database");
             DatabaseReference child = ref.child("data");
             child.setValue(garage);
-            TicketActivity.v= v;
+            TicketActivity.v = v;
             startActivity(new Intent(AttendantActivity.this, TicketActivity.class));
         }
     }
