@@ -45,6 +45,7 @@ public class RetrieveActivity extends AppCompatActivity {
                     return;
                 }
                 System.out.println("Not Found");
+                ReceiptActivity.v = new Vehicle();
                 startActivity(new Intent(RetrieveActivity.this, Floor1.class));
             }
             @Override
